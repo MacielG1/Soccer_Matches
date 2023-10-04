@@ -10,7 +10,7 @@ export default async function Home() {
       <div className="flex justify-between items-center mb-4 md:mb-2">
         <h2 className="text-md lg:text-xl font-semibold">Matches</h2>
       </div>
-      {/* {Lists Componente} */}
+      <Lists today={today} yesterday={yesterday} />
     </section>
   );
 }
