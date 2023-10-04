@@ -2,6 +2,7 @@
 import { matchesDataType, matchesType } from '@/lib/types';
 import { useState } from 'react';
 import { cn } from '@/lib/cn';
+import Table from './Table';
 
 type Props = {
   today: matchesDataType;
@@ -29,7 +30,10 @@ export default function Lists({ today, yesterday }: Props) {
         ))}
       </div>
 
-      <div className="w-full mb-6  ">{/* {render table} */}</div>
+      <div className="w-full mb-6">
+        <Table key="today" data={today} />
+        <Table key="yesterday" data={yesterday} />
+      </div>
     </section>
   );
 }

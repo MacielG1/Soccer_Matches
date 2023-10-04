@@ -1,5 +1,6 @@
 import getFinishedMatches from '@/utils/getYesterdayMatches';
 import getTodayMatches from '@/utils/getTodayMatches';
+import Lists from '@/components/Lists';
 
 export default async function Home() {
   const today = await getTodayMatches();
