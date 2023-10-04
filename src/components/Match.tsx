@@ -8,8 +8,8 @@ export default function Match({ data }: { data: matchesType }) {
   });
 
   return (
-    <div className="grid grid-cols-3 px-8 md:px-14 pb-2 ">
-      <div className="w-full flex items-center">
+    <div className="grid grid-cols-3 px-8 md:px-14  ">
+      <div className="w-full flex ">
         <div className="relative mr-2">
           <Image
             src={data?.homeTeam?.crest!}
@@ -21,9 +21,9 @@ export default function Match({ data }: { data: matchesType }) {
         </div>
         <p className="text-sm sm:whitespace-nowrap">{data?.homeTeam?.name}</p>
       </div>
-      <div className="px-3 m-auto flex justify-center text-sm items-center bg-neutral-800 border border-neutral-600 rounded-lg">
+      <div className="px-5 m-auto flex justify-center text-sm items-center bg-neutral-800 border border-neutral-600 rounded-lg">
         {data?.status == 'FINISHED' ? (
-          <p className="py-1  text-neutral-100 flex gap-2">
+          <p className="py-1 text-neutral-100 flex gap-2">
             <span>{data?.score?.fullTime.home}</span> :
             <span> {data.score?.fullTime.away}</span>
           </p>

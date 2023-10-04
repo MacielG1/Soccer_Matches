@@ -15,9 +15,9 @@ export default function SidebarItem({
 }: SidebarItemProps) {
   return (
     <Link href={href}>
-      <li className="flex hover:text-white items-center gap-2 p-2 rounded-md hover:bg-neutral-600 duration-300 transition-colors">
+      <li className="flex hover:text-white items-center gap-4 p-2 rounded-md hover:bg-neutral-600 duration-300 transition-colors">
         <Image src={logo} alt={title} width={18} height={18} />
-        <span className="text-sm md:text-md">{title}</span>
+        <span className="text-sm md:text-lg">{title}</span>
       </li>
     </Link>
   );

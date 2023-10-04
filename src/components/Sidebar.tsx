@@ -6,7 +6,7 @@ export default function Sidebar() {
       <h2 className="text-indigo-500 tracking-wider text-center text-lg font-semibold pb-3 ">
         Leagues
       </h2>
-      <ul className="gap-2">
+      <ul className="gap-3">
         {Leagues.map((l) => (
           <SidebarItem key={l.id} league={l} />
         ))}

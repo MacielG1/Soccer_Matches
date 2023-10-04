@@ -25,7 +25,7 @@ export default function Lists({ today, yesterday }: Props) {
             key={status}
             onClick={() => setStatusMatch(status)}
             className={cn(
-              'px-2 py-1   text-primary text-sm rounded-lg',
+              'px-2 py-1 text-primary text-sm rounded-lg',
               status === statusMatch
                 ? 'bg-indigo-600'
                 : 'bg-neutral-600 hover:bg-neutral-700 transition-colors duration-300'

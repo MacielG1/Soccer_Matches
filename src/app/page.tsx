@@ -7,7 +7,7 @@ export default async function Home() {
   const yesterday = await getFinishedMatches();
 
   return (
-    <section className="md:-ml-40 px-2 md:px-4 md:w-[40rem] xl:w-[50rem] ">
+    <section className="md:-ml-40 px-2 md:px-4  ">
       <Lists today={today} yesterday={yesterday} />
     </section>
   );

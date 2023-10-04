@@ -10,16 +10,22 @@ export default async function page({ params }: { params: { league: string } }) {
   if (!leagueId) return <h1>League Not Found</h1>;
 
   const data = await getSpecificLeague(leagueId);
+  const hasData = data?.matches?.length > 0;
 
   return (
-    <>
-      {data.matches.length === 0 ? (
-        <h1>No Matches</h1>
-      ) : (
-        <div className="md:-ml-40">
-          <Table data={data} />
-        </div>
-      )}
-    </>
+    <div className="md:-ml-40">
+      <div className="flex justify-center items-center mb-4 md:mb-10 self-center">
+        <h2 className="text-md lg:text-xl font-semibold">
+          {hasData ? 'Matches' : 'No Matches'}
+        </h2>
+      </div>
+      {hasData && <Table data={data} />}
+    </div>
   );
+}
+
+export async function generateStaticParams() {
+  return Leagues.map((post) => ({
+    league: post.href,
+  }));
 }

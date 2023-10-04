@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <div className="ml-8 my-4 container flex justify-between items-center">
+    <nav className="ml-8 my-4 container flex justify-between items-center">
       <Link href="/" className="flex items-center gap-4">
         <Image
           src="/logo.jpg"
@@ -17,6 +17,6 @@ export default function Navbar() {
           Soccer Matches
         </span>
       </Link>
-    </div>
+    </nav>
   );
 }

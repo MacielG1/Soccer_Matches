@@ -4,14 +4,14 @@ import Match from './Match';
 
 export default function Table({ data }: { data: matchesDataType }) {
   return (
-    <div className="md:w-[40rem] xl:w-[50rem] py-3 mb-10 px-2 md:px-3 rounded-md flex flex-col gap-3 bg-neutral-700">
+    <div className="md:w-[40rem] xl:w-[50rem] py-3 mb-10 px-2 md:px-3 rounded-md flex flex-col  bg-neutral-700">
       {data?.matches?.map((match: matchesType) => {
         const d = new Date(match?.utcDate);
         return (
-          <>
+          <div key={match.id}>
             {/* Header */}
             <div
-              className=" my-2 flex justify-between items-center px-4 py-1 bg-zinc-600 rounded-lg"
+              className=" my-3 flex justify-between items-center px-4 py-1 bg-zinc-600 rounded-lg"
               key={match.id}
             >
               <div className="flex gap-5">
@@ -29,7 +29,7 @@ export default function Table({ data }: { data: matchesDataType }) {
             </div>
             {/* Match Details */}
             <Match data={match} />
-          </>
+          </div>
         );
       })}
     </div>
