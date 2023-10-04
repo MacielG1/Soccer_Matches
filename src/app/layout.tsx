@@ -1,6 +1,8 @@
+import Navbar from '@/components/Navbar';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Roboto_Mono } from 'next/font/google';
+import Sidebar from '@/components/Sidebar';
 
 const font = Roboto_Mono({ subsets: ['latin'] });
 
@@ -17,10 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <header>{/* <Navbar /> */}</header>
-        <main className="px-2 md:px-1 md:py-2 flex gap-5">
-          {/* <Sidebar /> */}
-          {children}
+        <header>
+          <Navbar />
+        </header>
+        <main className="px-2 md:px-1 md:py-2 flex flex-col lg:flex-row">
+          <Sidebar />
+          <div className="flex-1 flex justify-center items-center ">
+            {children}
+          </div>
         </main>
       </body>
     </html>
