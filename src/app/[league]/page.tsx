@@ -25,7 +25,9 @@ export default async function page({ params }: { params: { league: string } }) {
 }
 
 export async function generateStaticParams() {
-  return Leagues.map((post) => ({
-    league: post.href,
-  }));
+  return Leagues.map((i) => {
+    return {
+      league: i.href,
+    };
+  });
 }
