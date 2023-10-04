@@ -41,5 +41,5 @@ export const fetchOptions = {
     'X-Auth-Token': process.env.FOOTBALL_DATA_API || '',
     'Content-Type': 'application/json',
   },
-  next: { revalidate: 60 },
+  next: { revalidate: 120 },
 };
