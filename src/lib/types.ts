@@ -8,7 +8,7 @@ export type matches = {
   competition: matchesCompetition;
   homeTeam: teamData;
   awayTeam: teamData;
-  score: Scores;
+  score: Score;
 };
 
 export type matchesCompetition = {
@@ -17,7 +17,7 @@ export type matchesCompetition = {
   emblem: string;
 };
 
-export type Scores = {
+export type Score = {
   fullTime: { home: number; away: number };
   halfTime: { home: number; away: number };
 };
@@ -29,7 +29,7 @@ export type matchesType = {
   status: string;
   homeTeam: teamData;
   awayTeam: teamData;
-  scores: Scores;
+  score: Score;
 };
 
 export type matchesDataType = {
