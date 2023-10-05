@@ -2,9 +2,10 @@ import { matchesType } from '@/lib/types';
 import Image from 'next/image';
 
 export default function Match({ data }: { data: matchesType }) {
-  const gameDate = new Date(data?.utcDate).toLocaleTimeString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
+  const gameDate = new Date(data?.utcDate).toLocaleString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: false,
   });
 
   return (
