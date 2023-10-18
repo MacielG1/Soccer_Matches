@@ -11,7 +11,7 @@ type SidebarItemProps = {
 };
 
 export default function SidebarItem({
-  league: { id, title, href, logo },
+  league: { title, href, logo },
 }: SidebarItemProps) {
   return (
     <Link href={href}>

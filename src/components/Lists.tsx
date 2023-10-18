@@ -6,16 +6,16 @@ import Table from './Table';
 import capitalize from '@/utils/Capitalize';
 
 type Props = {
-  today: matchesDataType;
+  future: matchesDataType;
   yesterday: matchesDataType;
 };
-const modes = ['today', 'yesterday'];
+const modes = ['future', 'yesterday'];
 
-export default function Lists({ today, yesterday }: Props) {
+export default function Lists({ future, yesterday }: Props) {
   const [statusMatch, setStatusMatch] = useState(modes[0]);
 
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col lg:ml-24 xl:ml-32">
       <div className="flex justify-between items-center mb-4 md:mb-2 self-center">
         <h2 className="text-md lg:text-xl font-semibold">Matches</h2>
       </div>
@@ -37,7 +37,7 @@ export default function Lists({ today, yesterday }: Props) {
       </div>
 
       <div className="w-full mb-6">
-        {statusMatch === 'today' && <Table key="today" data={today} />}
+        {statusMatch === 'future' && <Table key="future" data={future} />}
         {statusMatch === 'yesterday' && (
           <Table key="yesterday" data={yesterday} />
         )}

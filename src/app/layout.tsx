@@ -22,10 +22,15 @@ export default function RootLayout({
         <header>
           <Navbar />
         </header>
-        <main className="px-2 md:px-1 md:py-2 flex flex-col lg:flex-row">
-          <Sidebar />
-          <div className="flex-1 flex justify-center  ">{children}</div>
-        </main>
+
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-auto">
+            <Sidebar />
+          </div>
+          <main className="flex-1 flex flex-col md:px-1 md:py-2 overflow-y-auto items-center md:items-start">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

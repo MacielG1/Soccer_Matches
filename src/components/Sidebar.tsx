@@ -1,5 +1,6 @@
 import { Leagues } from '@/lib/data';
 import SidebarItem from './SidebarItem';
+
 export default function Sidebar() {
   return (
     <aside className="mb-2 ml-5 md:px-5 py-3 rounded-md bg-neutral-700 h-fit max-w-xs">

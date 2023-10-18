@@ -1,5 +1,5 @@
 import { Icons } from '@/assets/icons';
-
+export const revalidate = 3600;
 export default function loading() {
   return (
     <div className="absolute flex flex-col justify-center">
