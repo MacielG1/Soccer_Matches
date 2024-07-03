@@ -3,7 +3,7 @@ import { matchesDataType, matchesType } from '@/lib/types';
 import { useState } from 'react';
 import { cn } from '@/lib/cn';
 import Table from './Table';
-import capitalize from '@/utils/capitalize';
+import capitalizeText from '@/utils/capitalizeText';
 
 type Props = {
   future: matchesDataType;
@@ -31,7 +31,7 @@ export default function Lists({ future, yesterday }: Props) {
                 : 'bg-neutral-600 hover:bg-neutral-700 transition-colors duration-300'
             )}
           >
-            {capitalize(status)}
+            {capitalizeText(status)}
           </button>
         ))}
       </div>
