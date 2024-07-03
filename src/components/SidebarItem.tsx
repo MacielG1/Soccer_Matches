@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 type SidebarItemProps = {
   league: {
-    id: string;
+    id: number;
     title: string;
     href: string;
     logo: string;

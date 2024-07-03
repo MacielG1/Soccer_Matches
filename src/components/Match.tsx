@@ -12,13 +12,15 @@ export default function Match({ data }: { data: matchesType }) {
     <div className="grid grid-cols-3 px-8 md:px-14  ">
       <div className="w-full flex ">
         <div className="relative mr-2">
-          <Image
-            src={data?.homeTeam?.crest!}
-            alt={data?.homeTeam?.name!}
-            width={20}
-            height={20}
-            className="object-cover min-w-[16px]"
-          />
+          {data?.homeTeam?.crest && (
+            <Image
+              src={data?.homeTeam?.crest}
+              alt={data?.homeTeam?.name}
+              width={20}
+              height={20}
+              className="object-cover min-w-[16px]"
+            />
+          )}
         </div>
         <p className="text-sm sm:whitespace-nowrap">{data?.homeTeam?.name}</p>
       </div>
@@ -37,13 +39,15 @@ export default function Match({ data }: { data: matchesType }) {
           {data.awayTeam?.name}
         </p>
         <div className="relative ml-2">
-          <Image
-            src={data?.awayTeam?.crest!}
-            alt={data.awayTeam?.name!}
-            width={20}
-            height={20}
-            className="object-cover min-w-[16px]"
-          />
+          {data?.awayTeam?.crest && (
+            <Image
+              src={data?.awayTeam?.crest}
+              alt={data?.awayTeam?.name}
+              width={20}
+              height={20}
+              className="object-cover min-w-[16px] min-h-[16px]"
+            />
+          )}
         </div>
       </div>
     </div>

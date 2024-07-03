@@ -23,11 +23,11 @@ export default function RootLayout({
           <Navbar />
         </header>
 
-        <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-auto">
+        <div className=" flex flex-col justify-center md:flex-row">
+          {/* <div className="w-full md:w-auto">
             <Sidebar />
-          </div>
-          <main className="flex-1 flex flex-col md:px-1 md:py-2 overflow-y-auto items-center md:items-start">
+          </div> */}
+          <main className="flex-1 flex flex-grow flex-col md:px-1 md:py-1 overflow-y-auto items-center md:items-center">
             {children}
           </main>
         </div>

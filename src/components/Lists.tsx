@@ -3,7 +3,7 @@ import { matchesDataType, matchesType } from '@/lib/types';
 import { useState } from 'react';
 import { cn } from '@/lib/cn';
 import Table from './Table';
-import capitalize from '@/utils/Capitalize';
+import capitalize from '@/utils/capitalize';
 
 type Props = {
   future: matchesDataType;
@@ -12,10 +12,10 @@ type Props = {
 const modes = ['future', 'yesterday'];
 
 export default function Lists({ future, yesterday }: Props) {
-  const [statusMatch, setStatusMatch] = useState(modes[0]);
+  const [statusMatch, setStatusMatch] = useState('future');
 
   return (
-    <section className="flex flex-col lg:ml-24 xl:ml-32">
+    <section className="flex flex-col">
       <div className="flex justify-between items-center mb-4 md:mb-2 self-center">
         <h2 className="text-md lg:text-xl font-semibold">Matches</h2>
       </div>

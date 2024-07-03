@@ -1,57 +1,55 @@
-import { v4 as uuid } from 'uuid';
-
 export const Leagues = [
   {
-    id: uuid(),
+    id: 1,
     title: 'Brasileirão',
     href: 'brasileirao',
     logo: '/leagues/serie_a_brasil.webp',
-    footballDataId: 2032,
+    footballDataId: 2013,
   },
   {
-    id: uuid(),
+    id: 2,
     title: 'Copa Libertadores',
     href: 'libertadores',
     logo: '/leagues/libertadores.webp',
     footballDataId: 2152,
   },
   {
-    id: uuid(),
+    id: 3,
     title: 'Champions League',
     href: 'champions-league',
     logo: '/leagues/championsLeague.webp',
     footballDataId: 2001,
   },
   {
-    id: uuid(),
+    id: 4,
     title: 'Premier League',
     href: 'premier-league',
     logo: '/leagues/premier_league.webp',
     footballDataId: 2021,
   },
   {
-    id: uuid(),
+    id: 5,
     title: 'La Liga',
     href: 'la-liga',
     logo: '/leagues/laliga.webp',
     footballDataId: 2014,
   },
   {
-    id: uuid(),
+    id: 6,
     title: 'Bundesliga',
     href: 'bundesliga',
     logo: '/leagues/bundesliga.webp',
     footballDataId: 2002,
   },
   {
-    id: uuid(),
+    id: 7,
     title: 'Serie A',
     href: 'serie-a-italia',
     logo: '/leagues/serie_a_italia.webp',
     footballDataId: 2019,
   },
   {
-    id: uuid(),
+    id: 8,
     title: 'Ligue 1',
     href: 'ligue-1',
     logo: '/leagues/ligue_1.webp',
@@ -59,7 +57,7 @@ export const Leagues = [
   },
 
   {
-    id: uuid(),
+    id: 9,
     title: 'Primeira Liga',
     href: 'primeira-liga',
     logo: '/leagues/liga_portugal.webp',

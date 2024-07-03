@@ -2,6 +2,8 @@ import getFinishedMatches from '@/utils/getYesterdayMatches';
 import getFutureMatches from '@/utils/getFutureMatches';
 import Lists from '@/components/Lists';
 
+export const dynamic = 'force';
+
 export default async function Home() {
   const future = await getFutureMatches();
   const yesterday = await getFinishedMatches();
