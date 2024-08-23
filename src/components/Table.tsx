@@ -7,6 +7,8 @@ export default function Table({ data }: { data: matchesDataType }) {
     return match.homeTeam.name && match.awayTeam.name;
   });
 
+  console.log(filteredMatches);
+
   return (
     <>
       <div className="xl:w-[50rem] py-3 mb-10 px-2 md:px-3 rounded-md flex flex-col bg-neutral-700">
